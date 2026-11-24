@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Library - Perpustakaan & Komunitas Anime</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Efek Partikel / Sakura Anime Background -->
+    <div class="anime-bg-elements" id="sakuraContainer"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-book-sparkles"></i>
+            <span>Social<strong>Library</strong></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active" data-tab="library"><i class="fa-solid fa-layer-group"></i> Perpustakaan</a></li>
+            <li><a href="#" data-tab="chat"><i class="fa-solid fa-comments"></i> Forum & Chat</a></li>
+            <li><a href="#" data-tab="upload"><i class="fa-solid fa-cloud-arrow-up"></i> Tambah Karya</a></li>
+        </ul>
+        <div class="user-section" id="userSection">
+            <button class="btn-login" id="openLoginBtn"><i class="fa-solid fa-right-to-bracket"></i> Masuk / Daftar</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section dengan Maskot Anime -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge-anime">✨ Komunitas Literasi & Budaya Pop</span>
+            <h1>Jelajahi Dunia Tanpa Batas di <span class="gradient-text">Social Library</span></h1>
+            <p>Baca buku pelajaran sekolah, komik seru, novel fantasi, hingga cerpen karya komunitas sambil berdiskusi langsung dengan sesama pembaca.</p>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Cari judul buku, komik, penulis, atau mata pelajaran...">
+            </div>
+        </div>
+        <div class="hero-mascot">
+            <div class="mascot-card">
+                <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Aoi&backgroundColor=b6e3f4,c0aede,d1d4f9" alt="Anime Librarian Mascot">
+                <div class="mascot-speech" id="mascotSpeech">
+                    "Konbanwa! Mau baca komik atau belajar matematika hari ini?"
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama -->
+    <main class="container">
+        <!-- TAB 1: PERPUSTAKAAN -->
+        <section id="tab-library" class="tab-content active">
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">Semua Koleksi</button>
+                <button class="filter-btn" data-category="pelajaran"><i class="fa-solid fa-graduation-cap"></i> Pelajaran Sekolah</button>
+                <button class="filter-btn" data-category="komik"><i class="fa-solid fa-mask"></i> Komik / Manga</button>
+                <button class="filter-btn" data-category="novel"><i class="fa-solid fa-wand-magic-sparkles"></i> Novel</button>
+                <button class="filter-btn" data-category="cerpen"><i class="fa-solid fa-feather-pointed"></i> Cerpen</button>
+            </div>
+
+            <div class="book-grid" id="bookGrid">
+                <!-- Kartu buku dirender lewat JavaScript -->
+            </div>
+        </section>
+
+        <!-- TAB 2: FORUM & CHAT -->
+        <section id="tab-chat" class="tab-content">
+            <div class="chat-wrapper">
+                <div class="chat-sidebar">
+                    <h3><i class="fa-solid fa-hashtag"></i> Saluran Diskusi</h3>
+                    <ul class="channel-list" id="channelList">
+                        <li class="active" data-channel="umum"># obrolan-umum</li>
+                        <li data-channel="belajar"># tanya-pr-sekolah</li>
+                        <li data-channel="komik"># rekomendasi-komik</li>
+                        <li data-channel="menulis"># klub-penulis-novel</li>
+                    </ul>
+                    <div class="online-users">
+                        <h4>Anggota Aktif</h4>
+                        <div class="user-badge"><span class="dot"></span> Sakura_Chan (Admin)</div>
+                        <div class="user-badge"><span class="dot"></span> Raka_Pelajar</div>
+                        <div class="user-badge"><span class="dot"></span> Kazuma
